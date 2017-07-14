@@ -1,0 +1,537 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6B978A721F18774B00BD29C7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B978A711F18774B00BD29C7 /* AppDelegate.swift */; };
+		6B978A741F18774B00BD29C7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B978A731F18774B00BD29C7 /* ViewController.swift */; };
+		6B978A771F18774B00BD29C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B978A751F18774B00BD29C7 /* Main.storyboard */; };
+		6B978A791F18774B00BD29C7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B978A781F18774B00BD29C7 /* Assets.xcassets */; };
+		6B978A7C1F18774B00BD29C7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B978A7A1F18774B00BD29C7 /* LaunchScreen.storyboard */; };
+		6B978A871F18774B00BD29C7 /* LendittAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B978A861F18774B00BD29C7 /* LendittAppTests.swift */; };
+		6B978A921F18774B00BD29C7 /* LendittAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B978A911F18774B00BD29C7 /* LendittAppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B978A831F18774B00BD29C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B978A661F18774B00BD29C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B978A6D1F18774B00BD29C7;
+			remoteInfo = LendittApp;
+		};
+		6B978A8E1F18774B00BD29C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B978A661F18774B00BD29C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B978A6D1F18774B00BD29C7;
+			remoteInfo = LendittApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6B978A6E1F18774B00BD29C7 /* LendittApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LendittApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B978A711F18774B00BD29C7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6B978A731F18774B00BD29C7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6B978A761F18774B00BD29C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6B978A781F18774B00BD29C7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B978A7B1F18774B00BD29C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6B978A7D1F18774B00BD29C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B978A821F18774B00BD29C7 /* LendittAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LendittAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B978A861F18774B00BD29C7 /* LendittAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendittAppTests.swift; sourceTree = "<group>"; };
+		6B978A881F18774B00BD29C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B978A8D1F18774B00BD29C7 /* LendittAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LendittAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B978A911F18774B00BD29C7 /* LendittAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LendittAppUITests.swift; sourceTree = "<group>"; };
+		6B978A931F18774B00BD29C7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B978A6B1F18774B00BD29C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B978A7F1F18774B00BD29C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B978A8A1F18774B00BD29C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6B978A651F18774B00BD29C7 = {
+			isa = PBXGroup;
+			children = (
+				6B978A701F18774B00BD29C7 /* LendittApp */,
+				6B978A851F18774B00BD29C7 /* LendittAppTests */,
+				6B978A901F18774B00BD29C7 /* LendittAppUITests */,
+				6B978A6F1F18774B00BD29C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6B978A6F1F18774B00BD29C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B978A6E1F18774B00BD29C7 /* LendittApp.app */,
+				6B978A821F18774B00BD29C7 /* LendittAppTests.xctest */,
+				6B978A8D1F18774B00BD29C7 /* LendittAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B978A701F18774B00BD29C7 /* LendittApp */ = {
+			isa = PBXGroup;
+			children = (
+				6B978A711F18774B00BD29C7 /* AppDelegate.swift */,
+				6B978A731F18774B00BD29C7 /* ViewController.swift */,
+				6B978A751F18774B00BD29C7 /* Main.storyboard */,
+				6B978A781F18774B00BD29C7 /* Assets.xcassets */,
+				6B978A7A1F18774B00BD29C7 /* LaunchScreen.storyboard */,
+				6B978A7D1F18774B00BD29C7 /* Info.plist */,
+			);
+			path = LendittApp;
+			sourceTree = "<group>";
+		};
+		6B978A851F18774B00BD29C7 /* LendittAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B978A861F18774B00BD29C7 /* LendittAppTests.swift */,
+				6B978A881F18774B00BD29C7 /* Info.plist */,
+			);
+			path = LendittAppTests;
+			sourceTree = "<group>";
+		};
+		6B978A901F18774B00BD29C7 /* LendittAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B978A911F18774B00BD29C7 /* LendittAppUITests.swift */,
+				6B978A931F18774B00BD29C7 /* Info.plist */,
+			);
+			path = LendittAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B978A6D1F18774B00BD29C7 /* LendittApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B978A961F18774B00BD29C7 /* Build configuration list for PBXNativeTarget "LendittApp" */;
+			buildPhases = (
+				6B978A6A1F18774B00BD29C7 /* Sources */,
+				6B978A6B1F18774B00BD29C7 /* Frameworks */,
+				6B978A6C1F18774B00BD29C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LendittApp;
+			productName = LendittApp;
+			productReference = 6B978A6E1F18774B00BD29C7 /* LendittApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B978A811F18774B00BD29C7 /* LendittAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B978A991F18774B00BD29C7 /* Build configuration list for PBXNativeTarget "LendittAppTests" */;
+			buildPhases = (
+				6B978A7E1F18774B00BD29C7 /* Sources */,
+				6B978A7F1F18774B00BD29C7 /* Frameworks */,
+				6B978A801F18774B00BD29C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B978A841F18774B00BD29C7 /* PBXTargetDependency */,
+			);
+			name = LendittAppTests;
+			productName = LendittAppTests;
+			productReference = 6B978A821F18774B00BD29C7 /* LendittAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B978A8C1F18774B00BD29C7 /* LendittAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B978A9C1F18774B00BD29C7 /* Build configuration list for PBXNativeTarget "LendittAppUITests" */;
+			buildPhases = (
+				6B978A891F18774B00BD29C7 /* Sources */,
+				6B978A8A1F18774B00BD29C7 /* Frameworks */,
+				6B978A8B1F18774B00BD29C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B978A8F1F18774B00BD29C7 /* PBXTargetDependency */,
+			);
+			name = LendittAppUITests;
+			productName = LendittAppUITests;
+			productReference = 6B978A8D1F18774B00BD29C7 /* LendittAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B978A661F18774B00BD29C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Lenditt Co";
+				TargetAttributes = {
+					6B978A6D1F18774B00BD29C7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = P3LY3637GM;
+						ProvisioningStyle = Automatic;
+					};
+					6B978A811F18774B00BD29C7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = P3LY3637GM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B978A6D1F18774B00BD29C7;
+					};
+					6B978A8C1F18774B00BD29C7 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = P3LY3637GM;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6B978A6D1F18774B00BD29C7;
+					};
+				};
+			};
+			buildConfigurationList = 6B978A691F18774B00BD29C7 /* Build configuration list for PBXProject "LendittApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6B978A651F18774B00BD29C7;
+			productRefGroup = 6B978A6F1F18774B00BD29C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B978A6D1F18774B00BD29C7 /* LendittApp */,
+				6B978A811F18774B00BD29C7 /* LendittAppTests */,
+				6B978A8C1F18774B00BD29C7 /* LendittAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B978A6C1F18774B00BD29C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B978A7C1F18774B00BD29C7 /* LaunchScreen.storyboard in Resources */,
+				6B978A791F18774B00BD29C7 /* Assets.xcassets in Resources */,
+				6B978A771F18774B00BD29C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B978A801F18774B00BD29C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B978A8B1F18774B00BD29C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B978A6A1F18774B00BD29C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B978A741F18774B00BD29C7 /* ViewController.swift in Sources */,
+				6B978A721F18774B00BD29C7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B978A7E1F18774B00BD29C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B978A871F18774B00BD29C7 /* LendittAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B978A891F18774B00BD29C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B978A921F18774B00BD29C7 /* LendittAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B978A841F18774B00BD29C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B978A6D1F18774B00BD29C7 /* LendittApp */;
+			targetProxy = 6B978A831F18774B00BD29C7 /* PBXContainerItemProxy */;
+		};
+		6B978A8F1F18774B00BD29C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B978A6D1F18774B00BD29C7 /* LendittApp */;
+			targetProxy = 6B978A8E1F18774B00BD29C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B978A751F18774B00BD29C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B978A761F18774B00BD29C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6B978A7A1F18774B00BD29C7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B978A7B1F18774B00BD29C7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B978A941F18774B00BD29C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6B978A951F18774B00BD29C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B978A971F18774B00BD29C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P3LY3637GM;
+				INFOPLIST_FILE = LendittApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lendittapp.LendittApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		6B978A981F18774B00BD29C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = P3LY3637GM;
+				INFOPLIST_FILE = LendittApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lendittapp.LendittApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		6B978A9A1F18774B00BD29C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P3LY3637GM;
+				INFOPLIST_FILE = LendittAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lendittapp.LendittAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LendittApp.app/LendittApp";
+			};
+			name = Debug;
+		};
+		6B978A9B1F18774B00BD29C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = P3LY3637GM;
+				INFOPLIST_FILE = LendittAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lendittapp.LendittAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LendittApp.app/LendittApp";
+			};
+			name = Release;
+		};
+		6B978A9D1F18774B00BD29C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = P3LY3637GM;
+				INFOPLIST_FILE = LendittAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lendittapp.LendittAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LendittApp;
+			};
+			name = Debug;
+		};
+		6B978A9E1F18774B00BD29C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = P3LY3637GM;
+				INFOPLIST_FILE = LendittAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lendittapp.LendittAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LendittApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B978A691F18774B00BD29C7 /* Build configuration list for PBXProject "LendittApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B978A941F18774B00BD29C7 /* Debug */,
+				6B978A951F18774B00BD29C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B978A961F18774B00BD29C7 /* Build configuration list for PBXNativeTarget "LendittApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B978A971F18774B00BD29C7 /* Debug */,
+				6B978A981F18774B00BD29C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6B978A991F18774B00BD29C7 /* Build configuration list for PBXNativeTarget "LendittAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B978A9A1F18774B00BD29C7 /* Debug */,
+				6B978A9B1F18774B00BD29C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		6B978A9C1F18774B00BD29C7 /* Build configuration list for PBXNativeTarget "LendittAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B978A9D1F18774B00BD29C7 /* Debug */,
+				6B978A9E1F18774B00BD29C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B978A661F18774B00BD29C7 /* Project object */;
+}
