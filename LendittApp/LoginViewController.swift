@@ -1,7 +1,7 @@
 
 import UIKit
 
-class SignUpViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     @IBOutlet var goButton: UIButton!
     
@@ -39,10 +39,6 @@ class SignUpViewController: UIViewController {
     func keyboardWillHide(notification: Notification){
         let keyboardFrame = getKeyBoardFrame(notification: notification).cgRectValue;
         goButton.frame.origin.y = keyboardFrame.origin.y + goButton.frame.height;
-    }
-    
-    func keyboardChangedFrame(){
-        print("Changed frame!");
     }
     
     func getKeyBoardFrame(notification: Notification) -> NSValue{

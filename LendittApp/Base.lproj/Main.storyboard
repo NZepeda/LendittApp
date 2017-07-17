@@ -34,6 +34,9 @@
                                 <state key="normal" title="Sign Up" backgroundImage="signup_button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="qvO-fn-Vzu" kind="show" id="jSV-kJ-cg0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DDl-P8-Hw4">
                                 <rect key="frame" x="67" y="506" width="279" height="60"/>
@@ -74,10 +77,10 @@
             </objects>
             <point key="canvasLocation" x="189.85507246376812" y="32.608695652173914"/>
         </scene>
-        <!--Sign Up View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="7MF-zF-NZz">
             <objects>
-                <viewController id="Z3V-IU-Weg" customClass="SignUpViewController" customModule="LendittApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Z3V-IU-Weg" customClass="LoginViewController" customModule="LendittApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="niE-GV-3xR"/>
                         <viewControllerLayoutGuide type="bottom" id="56U-Gh-KuB"/>
@@ -168,7 +171,146 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bns-X9-dQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1055" y="33"/>
+            <point key="canvasLocation" x="1097" y="-366"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="gz3-3y-gxe">
+            <objects>
+                <viewController id="qvO-fn-Vzu" customClass="SignupViewController" customModule="LendittApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pi1-BZ-DV9"/>
+                        <viewControllerLayoutGuide type="bottom" id="xLS-Yy-xTC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EHC-eI-OAM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nD6-YP-Dc3">
+                                <rect key="frame" x="0.0" y="661" width="414" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="gGE-q4-Pr7"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="GoButton"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2F-Zs-uWT">
+                                <rect key="frame" x="20" y="69" width="26" height="23"/>
+                                <state key="normal" backgroundImage="Back"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="qvO-fn-Vzu" eventType="touchUpInside" id="xVG-vP-QgX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oP-Of-Ud8">
+                                <rect key="frame" x="173" y="64" width="69" height="24"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lenditt_blue" translatesAutoresizingMaskIntoConstraints="NO" id="Uqd-KT-VOH">
+                                <rect key="frame" x="63" y="165" width="288" height="57"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3FQ-Lo-Y3M" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="257" width="165" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="M01-dj-Mzn"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.35463091730000001" green="0.39503547550000001" blue="0.45498546960000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOl-xV-Mmx" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="240" y="257" width="154" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="sfv-B7-sJt"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.35463091730000001" green="0.39503547550000001" blue="0.45498546960000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yVk-BF-RM9">
+                                <rect key="frame" x="205" y="254" width="5" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="8hq-wL-9Cd"/>
+                                </constraints>
+                            </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bra-S1-LA0" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="341" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="obc-fO-zjj"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.35463091730000001" green="0.39503547550000001" blue="0.45498546960000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.35463091730000001" green="0.39503547550000001" blue="0.45498546960000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="htO-Vc-SHl" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="20" y="425" width="374" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="xDx-A0-q95"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.35463091730000001" green="0.39503547550000001" blue="0.45498546960000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0oP-Of-Ud8" firstAttribute="top" secondItem="pi1-BZ-DV9" secondAttribute="bottom" id="4LK-SA-N1X"/>
+                            <constraint firstItem="3FQ-Lo-Y3M" firstAttribute="leading" secondItem="EHC-eI-OAM" secondAttribute="leadingMargin" id="4vE-Ga-G76"/>
+                            <constraint firstItem="yVk-BF-RM9" firstAttribute="leading" secondItem="3FQ-Lo-Y3M" secondAttribute="trailing" constant="20" id="7Kg-gv-lVH"/>
+                            <constraint firstItem="y2F-Zs-uWT" firstAttribute="leading" secondItem="EHC-eI-OAM" secondAttribute="leadingMargin" id="7LO-Dg-20T"/>
+                            <constraint firstItem="Bra-S1-LA0" firstAttribute="leading" secondItem="EHC-eI-OAM" secondAttribute="leadingMargin" id="7TL-qs-vHY"/>
+                            <constraint firstAttribute="trailing" secondItem="nD6-YP-Dc3" secondAttribute="trailing" id="88e-5V-P3N"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Uqd-KT-VOH" secondAttribute="trailing" constant="43" id="9ys-rH-5kX"/>
+                            <constraint firstItem="HOl-xV-Mmx" firstAttribute="top" secondItem="Uqd-KT-VOH" secondAttribute="bottom" constant="35" id="APq-Hw-czN"/>
+                            <constraint firstItem="htO-Vc-SHl" firstAttribute="leading" secondItem="EHC-eI-OAM" secondAttribute="leadingMargin" id="Ag6-JU-Tjm"/>
+                            <constraint firstItem="0oP-Of-Ud8" firstAttribute="centerX" secondItem="EHC-eI-OAM" secondAttribute="centerX" id="B5d-7W-HCS"/>
+                            <constraint firstItem="HOl-xV-Mmx" firstAttribute="leading" secondItem="yVk-BF-RM9" secondAttribute="trailing" constant="30" id="BlS-fi-pQ6"/>
+                            <constraint firstAttribute="bottom" secondItem="yVk-BF-RM9" secondAttribute="bottom" constant="354" id="DGI-hQ-ezL"/>
+                            <constraint firstItem="Uqd-KT-VOH" firstAttribute="leading" secondItem="EHC-eI-OAM" secondAttribute="leadingMargin" constant="43" id="JDH-5q-eIV"/>
+                            <constraint firstItem="htO-Vc-SHl" firstAttribute="top" secondItem="Bra-S1-LA0" secondAttribute="bottom" constant="25" id="KEZ-lb-AJ9"/>
+                            <constraint firstItem="htO-Vc-SHl" firstAttribute="trailing" secondItem="EHC-eI-OAM" secondAttribute="trailingMargin" id="L5L-uY-9Qf"/>
+                            <constraint firstItem="xLS-Yy-xTC" firstAttribute="top" secondItem="nD6-YP-Dc3" secondAttribute="bottom" id="MXu-cg-xtR"/>
+                            <constraint firstItem="Bra-S1-LA0" firstAttribute="top" secondItem="3FQ-Lo-Y3M" secondAttribute="bottom" constant="25" id="O62-L6-zNq"/>
+                            <constraint firstItem="yVk-BF-RM9" firstAttribute="centerX" secondItem="EHC-eI-OAM" secondAttribute="centerX" id="QtY-y1-vHg"/>
+                            <constraint firstItem="nD6-YP-Dc3" firstAttribute="leading" secondItem="EHC-eI-OAM" secondAttribute="leading" id="S6T-RY-y0S"/>
+                            <constraint firstItem="Uqd-KT-VOH" firstAttribute="top" secondItem="0oP-Of-Ud8" secondAttribute="bottom" constant="77" id="bNK-t5-BQd"/>
+                            <constraint firstItem="y2F-Zs-uWT" firstAttribute="top" secondItem="pi1-BZ-DV9" secondAttribute="bottom" constant="5" id="e7A-jW-Yjh"/>
+                            <constraint firstItem="3FQ-Lo-Y3M" firstAttribute="top" secondItem="Uqd-KT-VOH" secondAttribute="bottom" constant="35" id="gbo-Cq-8Yq"/>
+                            <constraint firstItem="yVk-BF-RM9" firstAttribute="top" secondItem="Uqd-KT-VOH" secondAttribute="bottom" constant="32" id="tK7-XR-458"/>
+                            <constraint firstItem="Bra-S1-LA0" firstAttribute="trailing" secondItem="EHC-eI-OAM" secondAttribute="trailingMargin" id="uaQ-09-xzI"/>
+                            <constraint firstItem="HOl-xV-Mmx" firstAttribute="trailing" secondItem="EHC-eI-OAM" secondAttribute="trailingMargin" id="xcg-d5-ZPa"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goButton" destination="nD6-YP-Dc3" id="Ib2-rT-s7k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EV4-X7-Be1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1095.6521739130435" y="314.67391304347831"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BTb-5c-r44">
