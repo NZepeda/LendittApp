@@ -2,8 +2,6 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
-    @IBOutlet var goButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,13 +30,9 @@ class LoginViewController: UIViewController {
     
     // Mark - Helper Methods
     func keyboardWillShow(notification: Notification) {
-        let keyboardFrame = getKeyBoardFrame(notification: notification).cgRectValue;
-        goButton.frame.origin.y = keyboardFrame.origin.y - goButton.frame.height
     }
     
     func keyboardWillHide(notification: Notification){
-        let keyboardFrame = getKeyBoardFrame(notification: notification).cgRectValue;
-        goButton.frame.origin.y = keyboardFrame.origin.y + goButton.frame.height;
     }
     
     func getKeyBoardFrame(notification: Notification) -> NSValue{
