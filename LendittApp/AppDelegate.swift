@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        checkIfUserIsLoggedIn();
         return true
     }
 
@@ -39,6 +40,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    /** Helper methods **/
+    func checkIfUserIsLoggedIn() {
+        
+        if let token = KeychainStore.fetchTokenFromKeychain() {
+            // Query to check if token is still valid
+            setRootToLoggedInFlow();
+        }else{
+            setRootToLoggedOutFlow();
+        }
+        
+    }
+    
+    func setRootToLoggedInFlow(){
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Home", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController")
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func setRootToLoggedOutFlow(){
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "LoggedOutFlow");
+        
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
     }
 
 
