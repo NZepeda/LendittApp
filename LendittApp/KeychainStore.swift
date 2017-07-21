@@ -15,8 +15,11 @@ class KeychainStore {
         }
     }
     
-    static func insertTokenIntoKeychain(token: String) {
-        keychain.set(token, forKey: "authToken");
+    static func insertTokenIntoKeychain(token: String) -> Bool {
+        if keychain.set(token, forKey: "authToken") {
+            return true;
+        }
+        return false;
     }
     
     

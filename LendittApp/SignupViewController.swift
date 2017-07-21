@@ -34,7 +34,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
                         "password": getUnwrappedTextFromField(textField: passwordTextField)]
             
             Alamofire.request("https://lendittapi.herokuapp.com/api/v1/register", method: .post, parameters: data, encoding: URLEncoding.default).validate(statusCode: 200..<201).responseJSON { response in
-                print(response);
                 // Store token in keychain
                 
                 self.requestTokenFromServer(email: data["email"]!, password: data["password"]!);
@@ -47,15 +46,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     func requestTokenFromServer(email: String, password: String){
         let data = ["email": email, "password":password];
         
-        Alamofire.request("https://lendittapi.herokuapp.com/api/v1/authenticate", method: .post, parameters: data, encoding: URLEncoding.default).validate(statusCode: 200..<201).response { response in
-            
-            let json = JSON(data: response.data!)
-            
-            if let token : String = json["token"].string {
-                KeychainStore.insertTokenIntoKeychain(token: token);
-            }
-            
-        }
+        AuthenticationStore.authenticate(data: data);
     }
 
 
