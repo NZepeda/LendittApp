@@ -11,13 +11,17 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     
     // Keychain 
     let keychain = KeychainSwift();
+    var user = User();
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
         setTextFieldDelegates();
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning();
         
-        setTextFieldObservers();
     }
     
     // Mark - Delegate method
@@ -25,6 +29,13 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
         if let emailStepVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EmailStep") as? SignUpEmailStepViewController
         {
+            // Mark - TODO
+            // ** Ensure fields are valid before allowing user to proceed ** 
+            
+            user.firstName = getUnwrappedTextFromField(textField: firstNameTextField);
+            user.lastName = getUnwrappedTextFromField(textField: lastNameField);
+            
+            emailStepVC.user = user;
             show(emailStepVC, sender: self);
         }
 
@@ -63,25 +74,7 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         lastNameField.borderInactiveColor = UIColor.clear;
         return true;
     }
-    
-    func setTextFieldObservers(){
-        
-        // ** Set up keyboard listeners *//
-        // Keyboard Will Show
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShow),
-                                               name: .UIKeyboardWillShow,
-                                               object: nil);
-        
-        // Keyboard Will Hide
-        NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHide),
-                                               name: .UIKeyboardWillHide,
-                                               object: nil);
-        
-    }
 
-    
     func getUnwrappedTextFromField(textField: UITextField) -> String {
         if let fieldText: String = textField.text {
             return fieldText;
@@ -89,33 +82,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
         
         return "";
     }
-    
-    func keyboardWillShow(notification: Notification) {
-        
-    }
-    
-    func keyboardWillHide(notification: Notification){
-    }
-    
-    func getKeyBoardFrame(notification: Notification) -> NSValue{
-        return (notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue);
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning();
-        
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     @IBAction func backButtonClicked(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true);

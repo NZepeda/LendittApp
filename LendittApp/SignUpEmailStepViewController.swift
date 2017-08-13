@@ -7,9 +7,11 @@ class SignUpEmailStepViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var emailTextField: HoshiTextField!
     
+    var user = User();
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(user);
         setTextFieldDelegate();
     }
 
@@ -27,22 +29,14 @@ class SignUpEmailStepViewController: UIViewController, UITextFieldDelegate {
         
         if let passwordStepVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasswordStep") as? SignUpPasswordViewController {
             
+            user.email = emailTextField.text;
+            
+            passwordStepVC.user = user;
             show(passwordStepVC, sender: self);
         }
         
         return true;
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // Mark - IBActions
     @IBAction func backButtonClicked(_ sender: UIButton) {
