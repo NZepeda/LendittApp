@@ -9,8 +9,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var firstNameTextField: HoshiTextField!
     @IBOutlet var lastNameField: HoshiTextField!
-    @IBOutlet var emailTextField: HoshiTextField!
-    @IBOutlet var passwordTextField: HoshiTextField!
     
     
     // Keychain 
@@ -27,39 +25,23 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
     // Mark - Delegate method
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if(fieldsAreValid()){
-            let data = ["firstName": getUnwrappedTextFromField(textField: firstNameTextField),
-                        "lastName": getUnwrappedTextFromField(textField: lastNameField),
-                        "email": getUnwrappedTextFromField(textField: emailTextField),
-                        "password": getUnwrappedTextFromField(textField: passwordTextField)]
-            
-            Alamofire.request("https://lendittapi.herokuapp.com/api/v1/register", method: .post, parameters: data, encoding: URLEncoding.default).validate(statusCode: 200..<201).responseJSON { response in
-                // Store token in keychain
-                
-                self.requestTokenFromServer(email: data["email"]!, password: data["password"]!);
-            };
+        if let emailStepVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EmailStep") as? SignUpEmailStepViewController
+        {
+            show(emailStepVC, sender: self);
         }
-        
+
         return true;
     }
     
-    func requestTokenFromServer(email: String, password: String){
-        let data = ["email": email, "password":password];
-        
-        AuthenticationStore.authenticate(data: data);
-    }
-
 
     // Mark - Helper Methods
     func setTextFieldDelegates(){
         firstNameTextField.delegate = self;
         lastNameField.delegate = self;
-        emailTextField.delegate = self;
-        passwordTextField.delegate = self;
     }
     
     func fieldsAreValid() -> Bool{
-        if(firstNameFieldIsValid() && lastNameFieldIsValid() && emailFieldIsValid() && passwordIsValid()){
+        if(firstNameFieldIsValid() && lastNameFieldIsValid()){
             return true;
         }
         return false;
@@ -81,28 +63,6 @@ class SignupViewController: UIViewController, UITextFieldDelegate {
             return false;
         }
         lastNameField.borderInactiveColor = UIColor.clear;
-        return true;
-    }
-    
-    // ToDo - Add validation to ensure that this is a valid .edu email
-    func emailFieldIsValid() -> Bool {
-        if(emailTextField.text == ""){
-            emailTextField.borderInactiveColor = UIColor.red;
-            return false;
-        }
-        
-        emailTextField.borderInactiveColor = UIColor.clear;
-        return true;
-    }
-    
-    // ToDo - Add password min requirements
-    func passwordIsValid() -> Bool{
-        if(passwordTextField.text == ""){
-            passwordTextField.borderInactiveColor = UIColor.red;
-            return false;
-        }
-        
-        passwordTextField.borderInactiveColor = UIColor.clear;
         return true;
     }
     
