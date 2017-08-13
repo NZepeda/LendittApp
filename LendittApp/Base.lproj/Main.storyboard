@@ -274,6 +274,7 @@
                                 <state key="normal" backgroundImage="Back"/>
                                 <connections>
                                     <action selector="backButtonClicked:" destination="qvO-fn-Vzu" eventType="touchUpInside" id="8me-XE-J94"/>
+                                    <action selector="backButtonClicked:" destination="g01-xW-4xY" eventType="touchUpInside" id="AOf-ze-CrC"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lenditt_header_green" translatesAutoresizingMaskIntoConstraints="NO" id="6DO-T2-YnM">
@@ -331,15 +332,18 @@
                             <constraint firstItem="6DO-T2-YnM" firstAttribute="centerX" secondItem="Cdx-tO-65e" secondAttribute="centerX" id="qSN-MC-VzV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="MMC-nL-gC6" id="Bic-IX-eqy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="un1-bU-xR4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1814.4927536231885" y="316.304347826087"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Password View Controller-->
         <scene sceneID="EBT-hI-k64">
             <objects>
-                <viewController id="2Kx-BM-mjw" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PasswordStep" useStoryboardIdentifierAsRestorationIdentifier="YES" id="2Kx-BM-mjw" customClass="SignUpPasswordViewController" customModule="LendittApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7y8-Fa-ZCu"/>
                         <viewControllerLayoutGuide type="bottom" id="Nr0-go-d9M"/>
@@ -358,6 +362,7 @@
                                 <rect key="frame" x="20" y="28" width="26" height="23"/>
                                 <state key="normal" backgroundImage="Back"/>
                                 <connections>
+                                    <action selector="backButtonClicked:" destination="2Kx-BM-mjw" eventType="touchUpInside" id="I7z-mW-qEe"/>
                                     <action selector="backButtonClicked:" destination="qvO-fn-Vzu" eventType="touchUpInside" id="Uds-px-m7V"/>
                                 </connections>
                             </button>
@@ -408,6 +413,9 @@
                             <constraint firstItem="a9G-5d-c7z" firstAttribute="trailing" secondItem="kM3-mG-rZd" secondAttribute="trailingMargin" id="ifT-0q-0X2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="a9G-5d-c7z" id="4dx-aI-jmL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDq-4w-zAT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

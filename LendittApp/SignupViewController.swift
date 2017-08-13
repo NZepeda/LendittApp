@@ -1,9 +1,7 @@
 
 import UIKit
 import TextFieldEffects
-import Alamofire
 import KeychainSwift
-import SwiftyJSON
 
 class SignupViewController: UIViewController, UITextFieldDelegate {
 

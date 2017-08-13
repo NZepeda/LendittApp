@@ -2,35 +2,19 @@
 import UIKit
 import TextFieldEffects
 
+class SignUpPasswordViewController: UIViewController {
 
-class SignUpEmailStepViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet var emailTextField: HoshiTextField!
+    @IBOutlet var passwordTextField: HoshiTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        setTextFieldDelegate();
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
-    }
-    
-    func setTextFieldDelegate(){
-        emailTextField.delegate = self;
-    }
-    
-    // Mark - Delegate Methods
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        if let passwordStepVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasswordStep") as? SignUpPasswordViewController {
-            
-            show(passwordStepVC, sender: self);
-        }
-        
-        return true;
+        // Dispose of any resources that can be recreated.
     }
     
 
