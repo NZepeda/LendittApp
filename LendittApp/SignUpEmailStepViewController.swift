@@ -11,7 +11,6 @@ class SignUpEmailStepViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(user);
         setTextFieldDelegate();
     }
 
@@ -24,15 +23,24 @@ class SignUpEmailStepViewController: UIViewController, UITextFieldDelegate {
         emailTextField.delegate = self;
     }
     
+    // Mark - Helper Methods
+    func getUnwrappedTextFromField(textField: UITextField) -> String {
+        if let fieldText: String = textField.text {
+            return fieldText;
+        }
+        
+        return "";
+    }
+    
     // Mark - Delegate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        if let passwordStepVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "PasswordStep") as? SignUpPasswordViewController {
+        if let universityStepVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "UniversityStep") as? SignUpUniversityViewController {
             
-            user.email = emailTextField.text;
+            user.email = getUnwrappedTextFromField(textField: emailTextField);
             
-            passwordStepVC.user = user;
-            show(passwordStepVC, sender: self);
+            universityStepVC.user = user;
+            show(universityStepVC, sender: self);
         }
         
         return true;
