@@ -22,5 +22,9 @@ class KeychainStore {
         return false;
     }
     
+    static func removeTokenFromKeychain(){
+        keychain.delete("authToken");
+    }
+    
     
 }

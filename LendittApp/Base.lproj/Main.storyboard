@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AveFedan.ttf">
+            <string>AveFedanPERSONALUSEONLY</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Landing Page Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -35,7 +40,7 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lenditt_header_white" translatesAutoresizingMaskIntoConstraints="NO" id="jau-zR-BOU">
-                                <rect key="frame" x="71.666666666666686" y="189" width="260" height="90"/>
+                                <rect key="frame" x="72" y="189" width="260" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="Rvp-gh-llK"/>
                                     <constraint firstAttribute="width" constant="260" id="SNI-oh-iC4"/>
@@ -187,7 +192,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oP-Of-Ud8">
-                                <rect key="frame" x="172.66666666666666" y="64" width="69" height="24"/>
+                                <rect key="frame" x="173" y="64" width="69" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -302,13 +307,13 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYQ-aq-iNv">
-                                <rect key="frame" x="172.66666666666666" y="28" width="69" height="24"/>
+                                <rect key="frame" x="173" y="28" width="69" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6LT-dZ-VYa">
-                                <rect key="frame" x="20" y="300" width="374" height="39.666666666666686"/>
+                                <rect key="frame" x="20" y="300" width="374" height="40"/>
                                 <string key="text">We’re currently only available to students,
  so you must have a .edu email.</string>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
@@ -353,7 +358,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yJy-b4-vNe">
-                                <rect key="frame" x="173" y="27.999999999999996" width="69" height="23.666666666666661"/>
+                                <rect key="frame" x="173" y="28" width="69" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -421,6 +426,86 @@
             </objects>
             <point key="canvasLocation" x="3339" y="316"/>
         </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="IoC-i5-yyH">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="19J-V0-zUj" customClass="WelcomeViewController" customModule="LendittApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Itl-fW-jDX"/>
+                        <viewControllerLayoutGuide type="bottom" id="xI7-SM-9TO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gBd-uH-1Pq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7SH-Cf-oEg">
+                                <rect key="frame" x="103" y="90" width="209" height="50"/>
+                                <fontDescription key="fontDescription" name="AveFedanPERSONALUSEONLY" family="Ave Fedan PERSONAL USE ONLY" pointSize="50"/>
+                                <color key="textColor" red="0.12941176470588234" green="0.58431372549019611" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H93-kP-uw5">
+                                <rect key="frame" x="161" y="148" width="93" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.12941176469999999" green="0.58431372550000005" blue="0.41568627450000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZXa-c9-myZ">
+                                <rect key="frame" x="152" y="230" width="110" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="7dV-By-RGx"/>
+                                    <constraint firstAttribute="height" constant="125" id="9g1-N3-rbJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You're all signed up!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="as8-N8-hpw">
+                                <rect key="frame" x="99" y="380" width="217" height="28"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.59607843137254901" green="0.59607843137254901" blue="0.59607843137254901" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We'll require account verfication later" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2h8-Os-5gj">
+                                <rect key="frame" x="112" y="416" width="190" height="15"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.77254901960784317" green="0.85098039215686272" blue="0.24313725490196078" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEo-kg-qfY">
+                                <rect key="frame" x="107" y="581" width="200" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Jbq-9H-H48"/>
+                                </constraints>
+                                <state key="normal" title="BROWSE THE APP" backgroundImage="browse_app_button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2h8-Os-5gj" firstAttribute="leading" secondItem="gBd-uH-1Pq" secondAttribute="leadingMargin" constant="92" id="81Y-4B-ew2"/>
+                            <constraint firstItem="as8-N8-hpw" firstAttribute="leading" secondItem="gBd-uH-1Pq" secondAttribute="leadingMargin" constant="79" id="9JY-rd-l0k"/>
+                            <constraint firstItem="7SH-Cf-oEg" firstAttribute="top" secondItem="Itl-fW-jDX" secondAttribute="bottom" constant="70" id="LIN-gz-Kkk"/>
+                            <constraint firstItem="QEo-kg-qfY" firstAttribute="leading" secondItem="gBd-uH-1Pq" secondAttribute="leadingMargin" constant="87" id="NfH-LS-XXd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="QEo-kg-qfY" secondAttribute="trailing" constant="87" id="O2D-tp-MDd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="as8-N8-hpw" secondAttribute="trailing" constant="78" id="Qia-ek-svF"/>
+                            <constraint firstItem="as8-N8-hpw" firstAttribute="top" secondItem="ZXa-c9-myZ" secondAttribute="bottom" constant="25" id="R0n-kY-54b"/>
+                            <constraint firstItem="2h8-Os-5gj" firstAttribute="top" secondItem="as8-N8-hpw" secondAttribute="bottom" constant="8" id="XoW-rI-urR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2h8-Os-5gj" secondAttribute="trailing" constant="92" id="Zl5-1v-npI"/>
+                            <constraint firstItem="ZXa-c9-myZ" firstAttribute="top" secondItem="H93-kP-uw5" secondAttribute="bottom" constant="39" id="awJ-9z-2Kj"/>
+                            <constraint firstItem="H93-kP-uw5" firstAttribute="centerX" secondItem="gBd-uH-1Pq" secondAttribute="centerX" id="bX5-OP-Lh1"/>
+                            <constraint firstItem="xI7-SM-9TO" firstAttribute="top" secondItem="QEo-kg-qfY" secondAttribute="bottom" constant="115" id="hOX-iT-FTU"/>
+                            <constraint firstItem="ZXa-c9-myZ" firstAttribute="centerX" secondItem="gBd-uH-1Pq" secondAttribute="centerX" id="iL7-br-ctF"/>
+                            <constraint firstItem="H93-kP-uw5" firstAttribute="top" secondItem="7SH-Cf-oEg" secondAttribute="bottom" constant="8" id="n3L-mX-7dw"/>
+                            <constraint firstItem="7SH-Cf-oEg" firstAttribute="centerX" secondItem="gBd-uH-1Pq" secondAttribute="centerX" id="rfO-y0-Dgb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameLabel" destination="H93-kP-uw5" id="AbZ-Yf-PQE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xZo-qd-oQ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4104.347826086957" y="311.41304347826087"/>
+        </scene>
         <!--Sign Up University View Controller-->
         <scene sceneID="Wvz-vJ-0Mq">
             <objects>
@@ -434,7 +519,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XP-6P-5dN">
-                                <rect key="frame" x="173" y="27.999999999999996" width="69" height="23.666666666666661"/>
+                                <rect key="frame" x="173" y="28" width="69" height="24"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -508,7 +593,7 @@
             <objects>
                 <navigationController storyboardIdentifier="LoggedOutFlow" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="K4b-q0-jUf" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5e6-4r-E53">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5e6-4r-E53">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -525,9 +610,11 @@
     <resources>
         <image name="Back" width="26" height="23"/>
         <image name="background_green" width="640" height="1136"/>
+        <image name="browse_app_button" width="450" height="82"/>
         <image name="lenditt_header_green" width="322" height="136"/>
         <image name="lenditt_header_white" width="324" height="136"/>
         <image name="login_button" width="235" height="80"/>
+        <image name="logo" width="227" height="255"/>
         <image name="signup_button" width="319" height="80"/>
     </resources>
 </document>

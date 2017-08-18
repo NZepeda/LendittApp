@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0DE0015D3FD190113A7C82B9 /* Pods_LendittAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE010867DBDE644196BDECDE /* Pods_LendittAppTests.framework */; };
+		6B2523A31F46B95900D24DE9 /* AveFedan.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B2523A21F46B95900D24DE9 /* AveFedan.ttf */; };
+		6B2523A51F46C04C00D24DE9 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2523A41F46C04C00D24DE9 /* WelcomeViewController.swift */; };
 		6B4545121F41824200ACB96E /* SignUpUniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4545111F41824200ACB96E /* SignUpUniversityViewController.swift */; };
 		6B4B3C8B1F205EC900483CE3 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B4B3C8A1F205EC900483CE3 /* KeychainStore.swift */; };
 		6B4B3C8F1F207F8900483CE3 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B4B3C8E1F207F8900483CE3 /* Home.storyboard */; };
@@ -51,6 +53,8 @@
 		118FA3757CD3D26638BDCCDB /* Pods-LendittAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LendittAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LendittAppTests/Pods-LendittAppTests.release.xcconfig"; sourceTree = "<group>"; };
 		5CF6AD794D4A152C6A915844 /* Pods_LendittAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LendittAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A3917CC92CBF0B35C53035D /* Pods_LendittApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LendittApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B2523A21F46B95900D24DE9 /* AveFedan.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AveFedan.ttf; sourceTree = "<group>"; };
+		6B2523A41F46C04C00D24DE9 /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		6B4545111F41824200ACB96E /* SignUpUniversityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUniversityViewController.swift; sourceTree = "<group>"; };
 		6B4B3C8A1F205EC900483CE3 /* KeychainStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		6B4B3C8E1F207F8900483CE3 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
@@ -121,6 +125,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6B2523A11F46B93B00D24DE9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B978A7D1F18774B00BD29C7 /* Info.plist */,
+				6B2523A21F46B95900D24DE9 /* AveFedan.ttf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		6B4B3C891F205EA600483CE3 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +167,7 @@
 				6B978AAE1F189D4100BD29C7 /* LandingPageController.swift */,
 				6B978AB01F189F4000BD29C7 /* LoginViewController.swift */,
 				6B66F18A1F40E3F300F8508B /* Sign Up */,
+				6B2523A41F46C04C00D24DE9 /* WelcomeViewController.swift */,
 			);
 			name = LoginRegisterFlow;
 			sourceTree = "<group>";
@@ -210,6 +224,7 @@
 		6B978A701F18774B00BD29C7 /* LendittApp */ = {
 			isa = PBXGroup;
 			children = (
+				6B2523A11F46B93B00D24DE9 /* Supporting Files */,
 				6B66F18D1F41030A00F8508B /* Models */,
 				6B4B3C8D1F207F4800483CE3 /* Storyboards */,
 				6B4B3C8C1F207EDD00483CE3 /* ViewControllers */,
@@ -217,7 +232,6 @@
 				6B978A711F18774B00BD29C7 /* AppDelegate.swift */,
 				6B978A781F18774B00BD29C7 /* Assets.xcassets */,
 				6B978A7A1F18774B00BD29C7 /* LaunchScreen.storyboard */,
-				6B978A7D1F18774B00BD29C7 /* Info.plist */,
 				6B4B3C941F20802B00483CE3 /* LaunchScreenViewController.swift */,
 			);
 			path = LendittApp;
@@ -374,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B978A7C1F18774B00BD29C7 /* LaunchScreen.storyboard in Resources */,
+				6B2523A31F46B95900D24DE9 /* AveFedan.ttf in Resources */,
 				6B978A791F18774B00BD29C7 /* Assets.xcassets in Resources */,
 				6B978A771F18774B00BD29C7 /* Main.storyboard in Resources */,
 				6B4B3C8F1F207F8900483CE3 /* Home.storyboard in Resources */,
@@ -545,6 +560,7 @@
 				6B978AAF1F189D4100BD29C7 /* LandingPageController.swift in Sources */,
 				6B4BB4F61F1C58AA0085FC33 /* SignupViewController.swift in Sources */,
 				6B978A721F18774B00BD29C7 /* AppDelegate.swift in Sources */,
+				6B2523A51F46C04C00D24DE9 /* WelcomeViewController.swift in Sources */,
 				6B4B3C8B1F205EC900483CE3 /* KeychainStore.swift in Sources */,
 				6B4B3C931F207FF100483CE3 /* HomeViewController.swift in Sources */,
 				6B66F18C1F40E41300F8508B /* SignUpPasswordViewController.swift in Sources */,

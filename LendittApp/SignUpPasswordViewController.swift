@@ -12,7 +12,6 @@ class SignUpPasswordViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(user);
         setTextFieldDelegate();
     }
 
@@ -33,6 +32,16 @@ class SignUpPasswordViewController: UIViewController, UITextFieldDelegate {
         return "";
     }
     
+    func proceedToWelcomeScreen () {
+        if let welcomeVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "WelcomeScreen") as? WelcomeViewController {
+            
+            print("Moving to the welcome screen");
+            
+            welcomeVC.name = user.firstName;
+            show(welcomeVC, sender: self);
+        }
+    }
+    
     // Mark - Delegate Methods
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
@@ -42,11 +51,22 @@ class SignUpPasswordViewController: UIViewController, UITextFieldDelegate {
     }
     
     func registerUser(){
-        print("In the register user function!");
+        
         let data = getData();
+        
         ApiController.register(data, completionHandler: { response, error in
-            print("Response: \(response)");
-            print("Error: \(error)");
+            
+            if(response)! {
+                ApiController.authenticate(data, completionHandler: { (result, error) in
+                    print(result);
+                    if result == true {
+                        self.proceedToWelcomeScreen();
+                    }
+                    else{
+                        print("There was an error and could not present the welcome screen");
+                    }
+                })
+            }
         });
     }
     

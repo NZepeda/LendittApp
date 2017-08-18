@@ -6,16 +6,12 @@ class LaunchScreenViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
+        KeychainStore.removeTokenFromKeychain();
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    func checkIfUserIsLoggedIn() {
-        
-    }
-    
 
     /*
     // MARK: - Navigation

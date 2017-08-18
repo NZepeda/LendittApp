@@ -13,34 +13,55 @@ import SwiftyJSON
 class ApiController {
     
     // *****************************************************************************************
-    // This method sends out a post request to our authentication endpoint which returns a token
-    // if token is successfully retrieved and stored into our keychain, we return true representing
-    // a good response. Otherwise, we we return false.
+    // This method sends out a post request to our regiter endpoint. The response should look like
+    // JSON : {
+    //     "message" : "Successfully created the user",
+    //     "sucess"  : true
+    //  }
     // *****************************************************************************************    
     static func register(_ data: [String: String], completionHandler: @escaping (Bool?, Error?) -> ()){
-        print("In the authenticate method!");
-        print("Data:  \(data)");
-        
         Alamofire.request("https://lendittapi.herokuapp.com/api/v1/register", method: .post, parameters: data, encoding: URLEncoding.default).validate(statusCode: 200..<201).response { response in
-            print("Response from server: \(response)");
+            if(response.error == nil){
+                let json = JSON(data: response.data!);
+                
+                if let success = json["success"].bool {
+                    if (success){
+                        completionHandler(true, nil);
+                    }
+                }
+                else{
+                    completionHandler(false, createError(errorKey: "RegisterFailed", message: "There was an error creating the user"));
+                }
+            }
+            else{
+                completionHandler(false, response.error);
+            }
+        }
+    }
+    
+    static func authenticate(_ data: [String: String], completionHandler: @escaping (Bool?, Error?) -> ()){
+        
+        let authData : [String: String] = [
+            "email" : data["email"]!,
+            "password" : data["password"]!
+        ];
+        
+        Alamofire.request("https://lendittapi.herokuapp.com/api/v1/authenticate", method: .post, parameters: authData, encoding: URLEncoding.default).validate(statusCode: 200..<201).response { response in
+            
             if(response.error == nil){
                 let json = JSON(data: response.data!);
                 
                 if let token:String = json["token"].string {
+                    
                     print("Token \(token)");
+                    
                     let didInsertToKeychain = KeychainStore.insertTokenIntoKeychain(token: token);
                     
                     completionHandler(didInsertToKeychain, nil);
                 }
                 else{
-                    print("Shit it failed");
-                    let userInfo: [AnyHashable: Any] = [
-                        NSLocalizedDescriptionKey : NSLocalizedString("TokenError", comment: "Failed to retrieve auth token"),
-                        NSLocalizedFailureReasonErrorKey: NSLocalizedString("TokenError", comment: "Failed to retrieve auth token")
-                    ]
-                    let error = NSError(domain: "ApiCall", code: 500, userInfo: userInfo);
-                    
-                    completionHandler(false, error);
+                    print("Token was not present");
+                    completionHandler(false, createError(errorKey: "TokenError", message: "Failed to retrieve auth toke"));
                 }
             }
             else{
@@ -48,5 +69,19 @@ class ApiController {
                 completionHandler(false, response.error);
             }
         }
+
+    }
+    
+    static func createError(errorKey: String, message: String) -> Error {
+        
+        let userInfo: [AnyHashable: Any] = [
+            NSLocalizedDescriptionKey : NSLocalizedString(errorKey, comment: message),
+            NSLocalizedFailureReasonErrorKey: NSLocalizedString(errorKey, comment: message)
+        ]
+        
+        return NSError(domain: "APICall", code: 500, userInfo: userInfo);
+        
     }
 }
+
+
